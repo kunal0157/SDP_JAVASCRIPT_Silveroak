@@ -1,0 +1,92 @@
+<html>
+    <head>
+    <title> vanila js</title>
+    <style>
+        #b1{
+            height: 400px;
+            width: 400px;
+            background-color: aqua;
+        }
+        #b2{
+            height:200px;
+            width: 200px;
+            font-size: 200%;
+            background-color: burlywood;
+        }
+    </style>
+    <script>
+        function internalAlert()
+        {
+            alert('hello  user');
+        }
+        function internalConfirm()
+        {
+           if(confirm("are you sure..??"))
+           {
+
+               alert("yesss");
+           }
+           else
+           {
+               alert("nooo");
+           }
+        }
+        function internalPrompt()
+        {
+            var fname=prompt("enter your firstname");
+            var lname=prompt("enter your lastname");
+            alert(fname+" "+lname);
+        }
+        function bodyBgchangetoyellow()
+        {
+            document.body.style.backgroundColor="yellow";
+        }
+        function bodyBgchangetoprompt()
+        {
+            document.body.style.backgroundColor=prompt("choose  color");
+        }
+        function colorPickerBodyBG()
+        {
+            document.body.style.backgroundColor=document.getElementById("CP").value;
+        }
+        function yellowBgdiv()
+        {
+            document.getElementsByTagName("div")[0].style.backgroundColor="yellow";
+        }
+        function DivBgchangetotext()
+        {
+            document.getElementsByClassName("cld")[0].style.backgroundColor=prompt("enter background color...");
+        }
+        function colorPickerDivBG()
+        {
+            document.getElementById("b2").style.backgroundColor=document.getElementById("CP1").value;
+        }
+        
+    </script>
+    </head>
+    <body id="b1" >
+        <div id="b2" class="CLD">silver oak university</div>
+        <hr>
+        <input type="button" value ="aleart inline" onclick="alert('this is error')"> <!-- aleart inline  -->
+        <input type="button" value ="confirm inline" onclick="confirm('are you sure')"> <!-- confirm inline  -->
+        <input type="button" value ="prompt inline" onclick="prompt('enter full name')"> <!-- prompt inline  -->
+
+        <hr>
+
+        <input type="button" value ="aleart inline" onclick="internalAlert()"> <!-- aleart inline  -->
+        <input type="button" value ="confirm inline" onclick="internalConfirm()"> <!-- confirm inline  -->
+        <input type="button" value ="prompt inline" onclick="internalPrompt()"> <!-- prompt inline  -->
+
+        <hr>
+
+        <input type="button" value ="yellow body background" onclick="bodyBgchangetoyellow()"> <hr>
+        <input type="button" value ="enter text to change background color" onclick="bodyBgchangetoprompt()"><hr>
+        <input type="color" id="CP" onchange="colorPickerBodyBG()"><hr>
+
+        <input type="button" value ="yellow div background" onclick=" yellowBgdiv()"><hr>
+        <input type="button" value="text to background color to div" onclick=" DivBgchangetotext()"><hr>
+        <input type="color" id="CP1" onchange=" colorPickerDivBG()"><hr>
+
+
+    </body>
+</html>                                     
