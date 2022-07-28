@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title> calcy</title>
+        <style>
+            #bt1{
+                height: 40px;
+                width: 40px;
+                
+            }
+            #bt2{
+                height: 40px;
+                width: 40px;
+            }
+            #bt3{
+                height: 40px;
+                width: 40px;
+            }
+            #bt4{
+                height: 40px;
+                width: 40px;
+            }
+            #txt1{
+                    font: weight 100%;
+                    color:blueviolet;
+                    background-color:aquamarine;
+                }
+                #txt2{
+                    font: weight 100%;
+                    color:blueviolet;
+                    background-color:aquamarine;
+                }
+                #txtans{
+                    font: weight 100%;
+                    color:blueviolet;
+                    background-color:aquamarine;
+                }
+
+
+        </style>
+        </head>
+         <body>
+             <center>
+                
+            enter first num:<input type="text"  id="txt1" style="height: 30px;"/><br><br>
+            enter second num:<input type="text"  id="txt2" style="height: 30px;"/><br><br>
+            ans:<input type="text"  id="txtans"  style="height: 30px;" /><br>
+          
+
+            <br>
+            <div>
+                <input type="button" id="bt1" onclick=add() value="+" style="background-color:rgb(255, 14, 14);"/>
+                <input type="button" id="bt2" onclick=sub() value="-" style="background-color:rgb(255, 140, 0);"/>
+                <input type="button" id="bt3" onclick=mul() value="*" style="background-color:rgb(9, 255, 0);"/>
+                <input type="button" id="bt4" onclick=div() value="/" style="background-color:rgb(0, 26, 255);"/>
+            </div>
+            </center>
+        <script>
+            function add()
+            {
+                const a=parseInt(txt1.value);
+             
+                const b=parseInt(txt2.value);
+               
+                txtans.value=a+b;
+
+                document.getElementById("bt1").value=txtans;
+            }
+            function sub()
+            {
+                const a=parseInt(txt1.value);
+                const b=parseInt(txt2.value);
+                txtans.value=a-b;
+
+                document.getElementById("bt2").value=txtans;
+            }
+            function mul()
+            {
+                const a=parseInt(txt1.value);
+                const b=parseInt(txt2.value);
+                txtans.value=a*b;
+
+                document.getElementById("bt3").value=txtans;
+            }
+            function div()
+            {
+                const a=parseInt(txt1.value);
+                const b=parseInt(txt2.value);
+                txtans.value=a/b;
+
+                document.getElementById("bt4").value=txtans;
+            }
+        </script>
+     
+        </body>
+    
+</html>
