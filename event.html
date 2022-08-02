@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>
+            event
+        </title>
+        <style>
+        button(cursor.pointer);
+        </style>
+        <script>
+                function demoOnClick()
+                {
+                    document.body.style.backgroundColor="aqua";
+                }
+                function demoOndblClick()
+                {
+                    document.body.style.backgroundColor="yellow";
+                }
+                function demoOnFocus()
+                {
+                    document.getElementById("txtfocus").style.backgroundColor="blue";
+                }
+                function demoOnBlur()
+                {
+                    document.getElementById("txtblur").style.backgroundColor="red";
+                }
+                function demoOnKeypress()
+                {
+                    alert("keypress done");
+                }
+              
+                function demoOnKeyup()
+                {
+                    alert("keyup done");
+                }
+                
+                
+                    
+
+         </script>
+    </head>
+    <body>
+        
+        <button onclick="demoOnClick()">click event</button><hr/>
+        <button ondblclick="demoOndblClick()">double click event</button><hr/>
+
+        <b>focus</b>
+        <input type="text" palceholder="focus event demo" id="txtfocus" onfocus="demoOnFocus()"><hr/>
+        
+        <b>blur</b>
+        <input type="text" palceholder="blur event demo" id="txtblur" onblur="demoOnBlur()"><hr/>
+
+        <b>keypress</b>
+        <input type="text" palceholder="keypress event demo" id="k1"  onkeypress="demoOnKeypress()"><hr/>
+
+        <b>keyup</b>
+        <input type="text" palceholder="keyup event demo"  onkeyup="demoOnKeyup()"><hr/>
+
+
+   
+    </body>
+
+</html>
